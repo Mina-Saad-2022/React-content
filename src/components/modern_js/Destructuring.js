@@ -7,4 +7,11 @@ const second = () => {
   return des;
 };
 
-export { first , second };
+
+const third = () => {
+  const [ , ,des] = first();
+  return des;
+};
+
+
+export { first , second ,third };

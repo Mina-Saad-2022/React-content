@@ -7,11 +7,18 @@ import {
   data,
   add_data,
 } from "./components/modern_js/spread_operators";
-import { first, second } from "./components/modern_js/Destructuring";
+import { first, second, third } from "./components/modern_js/Destructuring";
+import {
+  getUserData,
+  createUserData,
+} from "./components/modern_js/primitive_type";
+import { array,array_map } from "./components/modern_js/array_map";
 
 function App() {
   const { id, name } = data();
   const { age } = add_data();
+  const primitive_old_data = getUserData();
+  const primitive_new_data = createUserData();
   return (
     <div className="App">
       <div className="container">
@@ -29,6 +36,12 @@ function App() {
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Destructuring</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="fourth">array map</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="_4">primitive type</Nav.Link>
                     </Nav.Item>
                   </Nav>
                 </Col>
@@ -57,7 +70,37 @@ function App() {
                     <Tab.Pane eventKey="third">
                       <ul>
                         <ol>the origin data is {first()}</ol>
-                        <ol>{second()}</ol>
+                        <ol>
+                          when i type [des] the result ={" "}
+                          <span className="text-danger">{second()}</span>
+                        </ol>
+                        <ol>
+                          when i type [ , , des] the result ={" "}
+                          <span className="text-danger">{third()}</span>
+                        </ol>
+                      </ul>
+                    </Tab.Pane>
+
+                    <Tab.Pane eventKey="fourth">
+                      <ul>
+                        <li>the origin data is : {array()}</li>
+                        <li>the array map + 1  = <span className="text-danger">{array_map()}</span> </li>
+                      </ul>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="_4">
+                      <ul>
+                        <li>
+                          the origin data is name :{" "}
+                          <span className="text-danger">
+                            {primitive_old_data.name}
+                          </span>
+                        </li>
+                        <li>
+                          after i use primitive type i change the data is name :{" "}
+                          <span className="text-danger">
+                            {primitive_new_data.name}
+                          </span>
+                        </li>
                       </ul>
                     </Tab.Pane>
                   </Tab.Content>
