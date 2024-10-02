@@ -266,6 +266,8 @@ function App() {
                             <Tab.Pane eventKey="join_test">
                               <div>
                                 <h2>array join</h2>
+                                <p className="font_arabic">
+                           وبتفصل مابينهم باستخدام فاصل معين  string مع بعض في   array هي انها بتجمع عناصر ال  join وظيفة ال                                </p>
                                 <p>the numbers array is : {getNumberArray()}</p>
                                 <p>
                                   <span className="text-danger">the result is : {joinNumberArrayWithComma()}</span>
