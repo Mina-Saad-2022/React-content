@@ -1,6 +1,11 @@
 const import_export = () => {
   return (
     <div>
+      <h2>Import & Export </h2>
+
+      <p className="font_arabic">
+        دي بنستخدمها عشان نقدر نقسم الكود لملفات مختلفة
+      </p>
       <p>
         When exporting: I need to type{" "}
         <span className="text-danger">'default'</span> at the end of the page
