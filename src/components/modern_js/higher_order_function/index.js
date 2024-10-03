@@ -1,4 +1,4 @@
-import { small_letter, capital_letter } from "./higher_order_function"; // استخدام الأقواس المعكوسة
+import { small_letter} from "./higher_order_function"; // استخدام الأقواس المعكوسة
 
 const {small,original} = small_letter(); // استدعاء الدالة هنا
 const function_higher_order_function = () => {
