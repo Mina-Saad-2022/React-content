@@ -10,16 +10,16 @@ const function_Destructuring = () => {
         القيم من
       </p>
       <ul>
-        <ol>the origin data is {first_Destructuring()}</ol>
+        <li>the origin data is {first_Destructuring()}</li>
 
-      <ol>
+      <li>
           when i type [des] the result =
           <span className="text-danger">{second_Destructuring()}</span>
-        </ol>
-        <ol>
+        </li>
+        <li>
           when i type [ , , des] the result =
           <span className="text-danger">{third_Destructuring()}</span>
-        </ol>
+        </li>
       </ul>
     </div>
   );

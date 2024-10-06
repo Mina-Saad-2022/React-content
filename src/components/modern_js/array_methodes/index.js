@@ -35,8 +35,8 @@ const function_array_methodes = () => {
       <h2 className="p-2 font-bold myText">array methods :</h2>
       <Tab.Container id="methods-array" defaultActiveKey="slice_test">
         <Row>
-          <Col md={3} sm={12} className="text-center">
-            <Nav variant="pills" className="flex-column">
+          <Col md={2} sm={12} className="text-center">
+            <Nav variant="pills" className="flex-column p-1 border">
               <Nav.Item>
                 <Nav.Link eventKey="slice_test">slice</Nav.Link>
               </Nav.Item>
@@ -63,7 +63,7 @@ const function_array_methodes = () => {
               </Nav.Item>
             </Nav>
           </Col>
-          <Col md={9} sm={12}>
+          <Col md={10} sm={12}>
             <Tab.Content>
               <Tab.Pane eventKey="slice_test">
                 <h2>array slice</h2>
@@ -82,40 +82,32 @@ const function_array_methodes = () => {
                 <div>
                   <ul>
                     <li>
-                      <div>
-                        the method slice(2)
-                        <span className="text-danger">
-                          It starts from the index i chose (2), and the result
-                          is: {getFromIndexTwo()}
-                        </span>
-                      </div>
+                      the method slice(2)
+                      <span className="text-danger">
+                        It starts from the index i chose (2), and the result is:{" "}
+                        {getFromIndexTwo()}
+                      </span>
                     </li>
                     <li>
-                      <div>
-                        the method slice(-2)
-                        <span className="text-danger">
-                          It get last index i chose (-2), and the result is:{" "}
-                          {getLastTwoLetters()}
-                        </span>
-                      </div>
+                      the method slice(-2)
+                      <span className="text-danger">
+                        It get last index i chose (-2), and the result is:{" "}
+                        {getLastTwoLetters()}
+                      </span>
                     </li>
                     <li>
-                      <div>
-                        the method slice(1,4)
-                        <span className="text-danger">
-                          It starts from the index i chose (1,4), and the result
-                          is: {getMiddleLetters()}
-                        </span>
-                      </div>
+                      the method slice(1,4)
+                      <span className="text-danger">
+                        It starts from the index i chose (1,4), and the result
+                        is: {getMiddleLetters()}
+                      </span>
                     </li>
                     <li>
-                      <div>
-                        the method slice()
-                        <span className="text-danger">
-                          It get all index in array, and the result is:{" "}
-                          {getAllLetters()}
-                        </span>
-                      </div>
+                      the method slice()
+                      <span className="text-danger">
+                        It get all index in array, and the result is:{" "}
+                        {getAllLetters()}
+                      </span>
                     </li>
                   </ul>
                 </div>

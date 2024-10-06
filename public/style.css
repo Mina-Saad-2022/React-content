@@ -7,3 +7,18 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .font_title{
+    font-family: "Playfair Display", serif;
+  }
+
+
+  
+  .zoom-image {
+    width: 100%; 
+    transition: transform 0.5s;}
+  
+  .zoom-image:hover {
+    transform: scale(2.5); 
+  }
+  
