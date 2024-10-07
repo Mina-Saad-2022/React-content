@@ -27,5 +27,7 @@ const FunctionMap = () => {
     </div>
   );
 };
-
-export { FunctionMap };
+const FunOnClick = (props) => {
+  props.onclick(props.title);
+};
+export { FunctionMap ,FunOnClick};

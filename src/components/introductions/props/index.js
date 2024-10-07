@@ -1,4 +1,5 @@
 import { Button, Card } from "react-bootstrap";
+import { FunOnClick } from "./card";
 
 /* eslint-disable jsx-a11y/img-redundant-alt */
 const Props = () => {
@@ -13,8 +14,8 @@ const Props = () => {
         </p>
         <ul className="col">
           <li className="font_arabic">
-            خاص بيه component يكون له card فمش من المنطقي ان كل card يعني مثلا لو
-            عندي اكتر من
+            خاص بيه component يكون له card فمش من المنطقي ان كل card يعني مثلا
+            لو عندي اكتر من
             <br />
             <p>
               <span className="text-danger">props</span> هستخدم ال data فعلشان
@@ -93,12 +94,12 @@ const Props = () => {
             <p className="font_arabic">parameter بتاخد 2 map function ال </p>
             <ol>
               <li className="font_arabic">
-                array بمعني كل قيمة في ال array الاول هو العنصر الحالي اللي بتشتغل
-                عليه في الـ parameter ال
+                array بمعني كل قيمة في ال array الاول هو العنصر الحالي اللي
+                بتشتغل عليه في الـ parameter ال
               </li>
               <li className="font_arabic">
-                array بتاع العنصر وده بيديك رقم مكان العنصر في ال index الثاني هو
-                ال parameter ال
+                array بتاع العنصر وده بيديك رقم مكان العنصر في ال index الثاني
+                هو ال parameter ال
               </li>
             </ol>
             <img
@@ -112,19 +113,44 @@ const Props = () => {
     </div>
   );
 };
+const test = (msg) => {
+  alert("this is : " + msg);
+};
 
 const CardProps = (props) => {
+  
   return (
-    <div className="col-lg-3 col-md-6 col-sm-12 mb-4 border p-2">
+    <div className="col-lg-3 col-md-6 col-sm-12 mb-4 m-1 ">
       <Card>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>{props.text}</Card.Text>
-          <Button variant="primary">{props.button}</Button>
+          <Button variant="primary"  onClick={() => FunOnClick({ onclick: test, title: props.title })}>{props.button}</Button>
         </Card.Body>
       </Card>
     </div>
   );
 };
 
-export { CardProps, Props };
+const FunctionProps = () => {
+  return (
+    <div className="container">
+      <div className="row">
+        <br />
+        <div className="col-12 mb-4 m-1">
+          <h2>functions props</h2>
+          <p className="font_arabic">
+            function ينفذ الbutton فنا عايز لما اضغط علي ال button فيه card يعني
+            مثلا لو عندي ، props لل function وهي اني اباصي
+          </p>
+        </div>
+        <div>
+          <p>
+          بتاعتي  function الخطوة الاولي : هروح اعمل ال 
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+export { CardProps, Props, FunctionProps };

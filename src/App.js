@@ -2,9 +2,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 import { modern_js } from "./components/modern_js";
 import { JSX } from "./components/introductions/JSX";
-import { CardProps, Props } from "./components/introductions/props";
-import { FunctionMap } from "./components/introductions/props/card";
+import {
+  CardProps,
+  FunctionProps,
+  Props,
+} from "./components/introductions/props";
+import { FunctionMap, FunOnClick } from "./components/introductions/props/card";
 
+// onclick = { FunOnClick };
 function App() {
   return (
     <div className="App">
@@ -28,12 +33,15 @@ function App() {
                   {/*  modern javascript */}
                   <Tab.Pane eventKey="modern_js">{modern_js()}</Tab.Pane>
                   <Tab.Pane eventKey="JSX">{JSX()}</Tab.Pane>
-                  <Tab.Pane eventKey="props">
-                    <div className="p-2">
+                  <Tab.Pane eventKey="props" className="border">
+                    <div className="border m-1">
                       <Props />
                     </div>
-                    <div>
+                    <div className="border m-1">
                       <FunctionMap />
+                    </div>
+                    <div className="border m-1">
+                      <FunctionProps />
                     </div>
                   </Tab.Pane>
                 </Tab.Content>
