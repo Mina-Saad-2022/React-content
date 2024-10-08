@@ -37,19 +37,19 @@ const Props = () => {
         </ul>
 
         <div className="row">
-          <div className="col-8">
+          <div className="col-12">
             <h6 className="font_arabic ">
               component ال function داخل parameter كـ props{" "}
               <span className="text-danger"> الخطوة 1 : </span>وهي اني بكتب كلمة
             </h6>
 
             <img
-              className="img-fluid zoom-image w-50"
+              className="img-fluid zoom-image w-25"
               src="https://i.ibb.co/YTg8x7B/1.png"
               alt="step 1"
             />
           </div>
-          <div className="col-8 text-end">
+          <div className="col-12 text-end">
             <h6 className="font_arabic">
               وغيرها title dis images متعيرة زي مثلا ال data في اي props{" "}
               <span className="text-danger">الخطوة 2 : </span>
@@ -57,31 +57,31 @@ const Props = () => {
             </h6>
             <div className="image-container">
               <img
-                className="img-fluid p-2 zoom-image w-50"
+                className="img-fluid p-2 zoom-image w-25"
                 src="https://c.top4top.io/p_3201ql64s1.png"
                 alt="step 2"
               />
 
               <img
-                className="img-fluid zoom-image w-50"
+                className="img-fluid zoom-image w-25"
                 src="https://k.top4top.io/p_3201gd2tm1.png"
                 alt="step 2"
               />
             </div>
           </div>
-          <div className="col-8">
+          <div className="col-12">
             <h6 className="font_arabic">
               object المتغيرة بداخل data{" "}
               <span className="text-danger">الخطوة 3 : </span>
               وهي اني هخزن ال
             </h6>
             <img
-              className="img-fluid zoom-image w-50"
+              className="img-fluid zoom-image w-25"
               src="https://j.top4top.io/p_3201pte2v1.png"
               alt="step 3"
             />
           </div>
-          <div className="col-8 text-end">
+          <div className="col-12 text-end" >
             <h6 className="font_arabic">
               card علي كل object علشان اقدر اوزع الداتا الخزنتها في ال map
               function <span className="text-danger"> الخطوة 4: </span>
@@ -92,8 +92,8 @@ const Props = () => {
             </p>
 
             <p className="font_arabic">parameter بتاخد 2 map function ال </p>
-            <ol>
-              <li className="font_arabic">
+            <ol >
+              <li className="font_arabic ">
                 array بمعني كل قيمة في ال array الاول هو العنصر الحالي اللي
                 بتشتغل عليه في الـ parameter ال
               </li>
@@ -103,7 +103,7 @@ const Props = () => {
               </li>
             </ol>
             <img
-              className="img-fluid zoom-image w-50"
+              className="img-fluid zoom-image w-25"
               src="https://iili.io/dm4toCB.png"
               alt="step 4"
             />
@@ -118,14 +118,18 @@ const test = (msg) => {
 };
 
 const CardProps = (props) => {
-  
   return (
-    <div className="col-lg-3 col-md-6 col-sm-12 mb-4 m-1 ">
+    <div className="col-lg-3 col-md-6 col-sm-6 mb-4 m-1 ">
       <Card>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>{props.text}</Card.Text>
-          <Button variant="primary"  onClick={() => FunOnClick({ onclick: test, title: props.title })}>{props.button}</Button>
+          <Button
+            variant="primary"
+            onClick={() => FunOnClick({ onclick: test, title: props.title })}
+          >
+            {props.button}
+          </Button>
         </Card.Body>
       </Card>
     </div>
@@ -145,8 +149,8 @@ const FunctionProps = () => {
           </p>
         </div>
         <div>
-          <p>
-          بتاعتي  function الخطوة الاولي : هروح اعمل ال 
+          <p className="font_arabic">
+            بتاعتي function <span className="text-danger">الخطوة الاولي : </span>هروح اعمل ال
           </p>
         </div>
       </div>
