@@ -44,7 +44,7 @@ const Props = () => {
             </h6>
 
             <img
-              className="img-fluid zoom-image w-25"
+              className="img-fluid zoom-image w-25 w-sm-50"
               src="https://i.ibb.co/YTg8x7B/1.png"
               alt="step 1"
             />
@@ -57,13 +57,13 @@ const Props = () => {
             </h6>
             <div className="image-container">
               <img
-                className="img-fluid p-2 zoom-image w-25"
+                className="img-fluid p-2 zoom-image w-25 w-sm-50"
                 src="https://c.top4top.io/p_3201ql64s1.png"
                 alt="step 2"
               />
 
               <img
-                className="img-fluid zoom-image w-25"
+                className="img-fluid zoom-image w-25 w-sm-50"
                 src="https://k.top4top.io/p_3201gd2tm1.png"
                 alt="step 2"
               />
@@ -76,7 +76,7 @@ const Props = () => {
               وهي اني هخزن ال
             </h6>
             <img
-              className="img-fluid zoom-image w-25"
+              className="img-fluid zoom-image w-25 w-sm-50"
               src="https://j.top4top.io/p_3201pte2v1.png"
               alt="step 3"
             />
@@ -103,7 +103,7 @@ const Props = () => {
               </li>
             </ol>
             <img
-              className="img-fluid zoom-image w-25"
+              className="img-fluid zoom-image w-25 w-sm-50"
               src="https://iili.io/dm4toCB.png"
               alt="step 4"
             />
