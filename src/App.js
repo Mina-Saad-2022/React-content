@@ -57,7 +57,7 @@ function App() {
               <Col md={2} sm={12}>
                 <Nav variant="pills" className="flex-column col-10 border p-2">
                   <Nav.Item>
-                    <Nav.Link eventKey="ModernJS">Modern JS</Nav.Link>
+                    <Nav.Link eventKey="ModernJS">Modern js</Nav.Link>
                     <Nav.Link eventKey="JSX">JSX</Nav.Link>
                     <Nav.Link eventKey="props">props</Nav.Link>
                   </Nav.Item>
