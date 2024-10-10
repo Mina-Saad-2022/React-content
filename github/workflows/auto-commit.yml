@@ -12,15 +12,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # هنا عدلنا المسافة
+        uses: actions/checkout@v3
 
       - name: Set up Git
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'youremail@example.com'
+          git config --global user.name 'Mina-Saad-2022'
+          git config --global user.email 'youremail@example.com' # حط الإيميل بتاعك هنا
 
       - name: Commit and Push changes
         run: |
           git add .
           git commit -m "Auto-update"
-          git push origin master
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Mina-Saad-2022/React-content.git
