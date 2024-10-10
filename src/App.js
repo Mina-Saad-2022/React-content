@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Nav, Row, Tab } from "react-bootstrap";
@@ -21,13 +21,14 @@ function App() {
 
     // قائمة العناوين والأحداث المرتبطة بكل مصطلح
     const keywords = [
-        { title: "ModernJS", eventKey: "ModernJS" },
-        { title: "JSX", eventKey: "JSX" },
-        { title: "props", eventKey: "props" },
+      { title: "ModernJS", eventKey: "ModernJS" },
+      { title: "JSX", eventKey: "JSX" },
+      { title: "props", eventKey: "props" },
     ];
 
-    // البحث عن أول تطابق
-    const matchedKeyword = keywords.find(({ title }) => title.toLowerCase().includes(value));
+    const matchedKeyword = keywords.find(({ title }) =>
+      title.toLowerCase().includes(value)
+    );
 
     setActiveKey(matchedKeyword ? matchedKeyword.eventKey : "first");
   };
@@ -36,7 +37,7 @@ function App() {
     <div className="App">
       <div className="container-fluid">
         <header className="App-header border p-3">
-          <h2 className="p-2 font-bold myText">React Introductions :</h2>
+          <h2 className="p-2 font-bold myText">React introductions :</h2>
 
           {/* Input for search */}
           <input
