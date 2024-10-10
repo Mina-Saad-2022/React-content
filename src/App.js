@@ -29,7 +29,6 @@ function App() {
     // البحث عن أول تطابق
     const matchedKeyword = keywords.find(({ title }) => title.toLowerCase().includes(value));
 
-    // إذا كان فيه تطابق، ضبّط activeKey
     setActiveKey(matchedKeyword ? matchedKeyword.eventKey : "first");
   };
 
@@ -37,7 +36,7 @@ function App() {
     <div className="App">
       <div className="container-fluid">
         <header className="App-header border p-3">
-          <h2 className="p-2 font-bold myText">React introductions :</h2>
+          <h2 className="p-2 font-bold myText">React INtroductions :</h2>
 
           {/* Input for search */}
           <input
