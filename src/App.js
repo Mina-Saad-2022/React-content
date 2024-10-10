@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <div className="container-fluid">
         <header className="App-header border p-3">
-          <h2 className="p-2 font-bold myText">React introductions :</h2>
+          <h2 className="p-2 font-bold myText">React Introductions :</h2>
 
           {/* Input for search */}
           <input
