@@ -60,6 +60,7 @@ function App() {
                     <Nav.Link eventKey="ModernJS">Modern JS</Nav.Link>
                     <Nav.Link eventKey="JSX">JSX</Nav.Link>
                     <Nav.Link eventKey="props">props</Nav.Link>
+                    <Nav.Link eventKey="RenderList">Render List</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
@@ -80,6 +81,11 @@ function App() {
                       <FunctionProps />
                     </div>
                   </Tab.Pane>
+                  <Tab.Pane eventKey="RenderList">{JSX()}</Tab.Pane>
+
+
+
+                  
                 </Tab.Content>
               </Col>
             </Row>
