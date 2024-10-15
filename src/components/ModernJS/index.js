@@ -18,7 +18,6 @@ function ModernJS() {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
 
-    // قائمة العناوين والأحداث المرتبطة بكل مصطلح
     const keywords = [
       { title: "import & export", eventKey: "first" },
       { title: "Spread operators", eventKey: "second" },
@@ -29,16 +28,15 @@ function ModernJS() {
       { title: "higher order function", eventKey: "higher order function" },
       { title: "promises", eventKey: "promises" },
     ];
-
-    // البحث عن أول تطابق
     const matchedKeyword = keywords.find(({ title }) => title.toLowerCase().includes(value));
-
-    // إذا كان فيه تطابق، ضبّط activeKey
     setActiveKey(matchedKeyword ? matchedKeyword.eventKey : "first");
   };
 
   return (
-    <header className="App-header border m-2 p-3">
+    <header className="App-header ">
+   <div className="container">
+    <div className="row">
+      <div className="col-12">
       <h2 className="p-2 fw-bold myText">modern javaScript :</h2>
       <input
         type="text"
@@ -93,6 +91,9 @@ function ModernJS() {
           </Col>
         </Row>
       </Tab.Container>
+      </div>
+    </div>
+   </div>
     </header>
   );
 }
