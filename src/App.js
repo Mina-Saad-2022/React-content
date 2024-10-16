@@ -5,90 +5,147 @@ import { JSX } from "./components/introductions/JSX";
 import { Props } from "./components/introductions/props";
 import { ModernJS } from "./components/ModernJS";
 import { AppRouter } from "./components/introductions/AppRouter";
-import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import { RenderList } from "./components/introductions/RenderList";
-
-function Navigation() {
-  const location = useLocation();
-
-  return (
-    <div className="col p-2  d-lg-flex justify-content-evenly">
-      {/* Modern JS */}
-      <Link to="/ModernJS">
-        <Button className="m-sm-1"
-          variant={location.pathname === "/ModernJS" ? "primary" : "outline-primary"}
-        >
-          Modern JS
-        </Button>
-      </Link>
-
-      {/* JSX */}
-      <Link to="/jsx">
-        <Button
-          variant={location.pathname === "/jsx" ? "primary" : "outline-primary"}
-        >
-          JSX
-        </Button>
-      </Link>
-
-      {/* Props */}
-      <Link to="/props">
-        <Button
-          variant={location.pathname === "/props" ? "primary" : "outline-primary"}
-        >
-          Props
-        </Button>
-      </Link>
-
-      {/* RenderList */}
-      <Link to="/renderList">
-        <Button
-          variant={location.pathname === "/renderList" ? "primary" : "outline-primary"}
-        >
-          RenderList
-        </Button>
-      </Link>
-
-      {/* Router */}
-      <Link to="/router/*">
-        <Button
-          variant={location.pathname.startsWith("/router") ? "primary" : "outline-primary"}
-        >
-          Router
-        </Button>
-      </Link>
-    </div>
-  );
-}
+import { Events } from "./components/introductions/Events";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className="Container">
-          <div className="row p-1">
-            <h2 className="p-2 font-bold myText">React introductions :</h2>
-            <div className="col-lg-5 col-sm-12">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="form-control mb-3"
-              />
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
+  return (
+    <div className="App">
+      <h2 className="p-2 font-bold myText">React introductions :</h2>
+      <div className="container">
+        <div className="row">
+          {/* input search */}
+          <div className="col-lg-3 col-sm-12 ">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="form-control"
+            />
+          </div>
+
+          {/* links pages */}
+          <div className="col-lg-9 col-sm-12 ">
+            <div className="container">
+              <div className="row">
+                {/* Modern JS */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/ModernJS">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname === "/ModernJS"
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Modern JS
+                    </Button>
+                  </Link>
+                </div>
+                {/* JSX */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/jsx">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname === "/jsx"
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      JSX
+                    </Button>
+                  </Link>
+                </div>
+                {/* Props */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/props">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname === "/props"
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Props
+                    </Button>
+                  </Link>
+                </div>
+                {/* RenderList */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/renderList">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname === "/renderList"
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      RenderList
+                    </Button>
+                  </Link>
+                </div>
+                {/* Router */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/router/*">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname.startsWith("/router")
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Router
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Router */}
+                <div className="col-lg-2 col-sm-4">
+                  <Link to="/event">
+                    <Button className='w-100'
+                      variant={
+                        location.pathname.startsWith("/event")
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Event
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <Navigation /> 
           </div>
         </div>
-
-        {/* Routes to go to my components */}
-        <Routes>
-          <Route path="/ModernJS" element={<ModernJS />} />
-          <Route path="/jsx" element={<JSX />} />
-          <Route path="/props" element={<Props />} />
-          <Route path="/renderList" element={<RenderList />} />
-          <Route path="/router/*" element={<AppRouter />} />
-        </Routes>
       </div>
-    </BrowserRouter>
+
+      {/* Routes to go to my components */}
+      <Routes>
+        <Route path="/ModernJS" element={<ModernJS />} />
+        <Route path="/jsx" element={<JSX />} />
+        <Route path="/props" element={<Props />} />
+        <Route path="/renderList" element={<RenderList />} />
+        <Route path="/router/*" element={<AppRouter />} />
+        <Route path="/event" element={<Events />} />
+
+      </Routes>
+    </div>
   );
 }
 

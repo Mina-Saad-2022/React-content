@@ -9,9 +9,9 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <div className="Container p-1">
+    <div className="Container pt-3 ">
       <div className="row">
-        <div className="col-4">
+        <div className="col-4 text-center">
           <Link to="one">
             <Button
               className="w-lg-50"
