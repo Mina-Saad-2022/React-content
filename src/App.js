@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import { RenderList } from "./components/introductions/RenderList";
 import { Events } from "./components/introductions/Events";
+import { API } from "./API";
 
 function App() {
   return (
@@ -28,26 +29,20 @@ function AppContent() {
 
   return (
     <div className="App">
-      <h2 className="p-2 font-bold myText">React introductions :</h2>
       <div className="container">
         <div className="row">
-          {/* input search */}
-          <div className="col-lg-3 col-sm-12 ">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="form-control"
-            />
+          <div className="col-3">
+          <h4 className="p-2 font-bold myText">React introductions :</h4>
           </div>
-
-          {/* links pages */}
-          <div className="col-lg-9 col-sm-12 ">
+                  {/* links pages */}
+          <div className="col-lg-9 col-sm-12 p-2">
             <div className="container">
               <div className="row">
                 {/* Modern JS */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/ModernJS">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname === "/ModernJS"
                           ? "primary"
@@ -61,7 +56,8 @@ function AppContent() {
                 {/* JSX */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/jsx">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname === "/jsx"
                           ? "primary"
@@ -75,7 +71,8 @@ function AppContent() {
                 {/* Props */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/props">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname === "/props"
                           ? "primary"
@@ -89,7 +86,8 @@ function AppContent() {
                 {/* RenderList */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/renderList">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname === "/renderList"
                           ? "primary"
@@ -103,7 +101,8 @@ function AppContent() {
                 {/* Router */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/router/*">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname.startsWith("/router")
                           ? "primary"
@@ -118,7 +117,8 @@ function AppContent() {
                 {/* Router */}
                 <div className="col-lg-2 col-sm-4">
                   <Link to="/event">
-                    <Button className='w-100'
+                    <Button
+                      className="w-100"
                       variant={
                         location.pathname.startsWith("/event")
                           ? "primary"
@@ -126,6 +126,21 @@ function AppContent() {
                       }
                     >
                       Event
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="col-lg-2 col-sm-4 p-2">
+                  <Link to="/api/">
+                    <Button
+                      className="w-100"
+                      variant={
+                        location.pathname.startsWith("/api")
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      API
                     </Button>
                   </Link>
                 </div>
@@ -143,7 +158,7 @@ function AppContent() {
         <Route path="/renderList" element={<RenderList />} />
         <Route path="/router/*" element={<AppRouter />} />
         <Route path="/event" element={<Events />} />
-
+        <Route path="/api" element={<API />} />
       </Routes>
     </div>
   );

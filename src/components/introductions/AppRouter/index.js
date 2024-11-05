@@ -15,7 +15,11 @@ const Navigation = () => {
           <Link to="one">
             <Button
               className="w-lg-50"
-              variant={location.pathname === "/router/one" ? "primary" : "outline-primary"}
+              variant={
+                location.pathname === "/router/one"
+                  ? "primary"
+                  : "outline-primary"
+              }
             >
               page One
             </Button>
@@ -25,7 +29,11 @@ const Navigation = () => {
           <Link to="two">
             <Button
               className="w-lg-50"
-              variant={location.pathname === "/router/two" ? "danger" : "outline-danger"}
+              variant={
+                location.pathname === "/router/two"
+                  ? "danger"
+                  : "outline-danger"
+              }
             >
               page Two
             </Button>
@@ -35,7 +43,11 @@ const Navigation = () => {
           <Link to="three">
             <Button
               className="w-lg-50"
-              variant={location.pathname === "/router/three" ? "success" : "outline-success"}
+              variant={
+                location.pathname === "/router/three"
+                  ? "success"
+                  : "outline-success"
+              }
             >
               page Three
             </Button>
