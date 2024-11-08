@@ -18,7 +18,7 @@ const FunctionComponent = () => {
       <h4>the count is : {count}</h4>
       <div className="d-flex justify-content-center flex-wrap">
         <Button
-          className="w-auto m-2 p-3"
+          className="w-25 m-2 "
           onClick={add_one}
           variant="primary"
         >
@@ -26,7 +26,7 @@ const FunctionComponent = () => {
         </Button>
 
         <Button
-          className="w-auto m-2 p-3"
+          className="w-25 m-2 "
           onClick={subtraction_one}
           variant="secondary"
         >
