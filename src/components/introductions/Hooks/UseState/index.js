@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
+import {Image,Button} from "react-bootstrap";
 
 const FunctionComponent = () => {
   const [count, setcount] = useState(0);
