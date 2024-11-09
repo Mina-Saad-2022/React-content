@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Button , Form } from "react-bootstrap";
+import React, { useRef } from "react";
+import { Button, Form, Row, Col ,Image } from "react-bootstrap";
 
 const SimpleUseRefExample = () => {
   // هنا بنعمل متغير باستخدام useRef عشان نمسك بيه ال input
@@ -12,13 +12,19 @@ const SimpleUseRefExample = () => {
 
   return (
     <div>
-      <Form.Control className='w-50' type="text" ref={inputRef} placeholder="Type here..." />
-      <Button className='m-2' variant="success" onClick={focusInput}>Focus on Input</Button> {/* عند الضغط هيركز علي input */}
+      <Form.Control
+        className="w-50"
+        type="text"
+        ref={inputRef}
+        placeholder="Type here..."
+      />
+      <Button className="m-2" variant="success" onClick={focusInput}>
+        Focus on Input
+      </Button>{" "}
+      {/* عند الضغط هيركز علي input */}
     </div>
   );
 };
-
-export default SimpleUseRefExample;
 
 const function_UseRef = () => {
   return (
@@ -27,9 +33,23 @@ const function_UseRef = () => {
         <h2>UseRef</h2>
         <ul>
           <li>
-         يعني مرجع والغرض منها انها بتخليني اشاور علي اي عنصر واخد القيمة بتاعته referance هي اختصار لكلمة ref كلمة 
+            يعني مرجع والغرض منها انها بتخليني اشاور علي اي عنصر واخد القيمة
+            بتاعته referance هي اختصار لكلمة ref كلمة
           </li>
         </ul>
+        <Row>
+          <Col xs={12} md={8} lg={12}>
+            <h4>Example</h4>
+            <p>
+              input وعايز لما اضغط عليه يوخليني اروح اكتب في ال button مثلا لو
+              عندي
+            </p>
+            <Image
+              className="w-50 zoom-image m-2 rounded"
+              src="https://i.ibb.co/YtBFvyh/code.png"
+            />
+          </Col>
+        </Row>
       </div>
       <SimpleUseRefExample />
     </>
