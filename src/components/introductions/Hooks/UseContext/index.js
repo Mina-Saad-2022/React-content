@@ -27,10 +27,10 @@ const function_UseContext = () => {
               </li>
               <li>
                 {" "}
-                واقدر اوصله من اي مكان داخل المشروعdatabase هخزن قيمة في مكان
-                منفصل كانه في ال usecontext فمن خلال ال
+                واقدر اوصلها من اي مكان داخل المشروع database هستدعي قيم موجودة في مكان
+                منفصل كانها في ال usecontext فمن خلال ال
               </li>
-              <li>contextApi لازم الاول نعرف ال usecontext علشان اشتغل بال</li>
+              <li>وده المكان الهخزن فيه القيم العايز استدعيها <span className="fw-bold text-success">contextApi</span> لازم الاول نعرف ال usecontext علشان اشتغل بال</li>
               <li>
                 contextApi والهو هيكون context من نوع object ببساطة انها بتاخد
                 usecontext وتعريف ال
@@ -47,14 +47,7 @@ const function_UseContext = () => {
                 <br />
                 prop-driling المشروع والبتحصل من خلال ال components ال
               </li>
-              <li>
-                <h6 className="text-danger">
-                  الخلاصة يعني في اي مكان بيكون عندي زي مخزن صغير وهيكون
-                  <br />
-                  usecontext وبخزن فيه قيم معينة وعلشان اوصل للقيم دي لازم
-                  استخدام ال contextApi هو ال
-                </h6>
-              </li>
+             
             </ul>
           </Col>
           <Col xs={12} md={8} lg={12}>
