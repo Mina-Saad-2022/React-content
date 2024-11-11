@@ -19,4 +19,8 @@
   .zoom-image:hover {
     transform: scale(1.5); 
   }
+ *{
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
  
+ }

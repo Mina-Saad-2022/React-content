@@ -15,7 +15,7 @@ const function_UseContext = () => {
           <Col xs={12} md={8} lg={12}>
             <ul>
               <li>
-                انه بيخزن قيم usecontext استخدام ال
+                انه بيخليني <span className="fw-bold text-success">استدعي</span> قيم usecontext استخدام ال
                 <br />
                 وكمان علشان يحل المشاكل الممكن تحصل في المشاريع الكبيرة
                 <br />
