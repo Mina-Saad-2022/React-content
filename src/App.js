@@ -5,11 +5,19 @@ import { JSX } from "./components/introductions/JSX";
 import { Props } from "./components/introductions/props";
 import { ModernJS } from "./components/ModernJS";
 import { AppRouter } from "./components/introductions/AppRouter";
-import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import { RenderList } from "./components/introductions/RenderList";
 import { Events } from "./components/introductions/Events";
 import { API } from "./API";
 import { HOOKS } from "./components/introductions/Hooks";
+
+// import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
 function App() {
   return (
@@ -38,7 +46,11 @@ function AppContent() {
                   <Link to="/ModernJS">
                     <Button
                       className="w-100"
-                      variant={location.pathname === "/ModernJS" ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname === "/ModernJS"
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       Modern JS
                     </Button>
@@ -49,7 +61,11 @@ function AppContent() {
                   <Link to="/jsx">
                     <Button
                       className="w-100"
-                      variant={location.pathname === "/jsx" ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname === "/jsx"
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       JSX
                     </Button>
@@ -60,7 +76,11 @@ function AppContent() {
                   <Link to="/props">
                     <Button
                       className="w-100"
-                      variant={location.pathname === "/props" ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname === "/props"
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       Props
                     </Button>
@@ -71,7 +91,11 @@ function AppContent() {
                   <Link to="/renderList">
                     <Button
                       className="w-100"
-                      variant={location.pathname === "/renderList" ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname === "/renderList"
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       RenderList
                     </Button>
@@ -82,7 +106,11 @@ function AppContent() {
                   <Link to="/router/*">
                     <Button
                       className="w-100"
-                      variant={location.pathname.startsWith("/router") ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname.startsWith("/router")
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       Router
                     </Button>
@@ -94,7 +122,11 @@ function AppContent() {
                   <Link to="/event">
                     <Button
                       className="w-100"
-                      variant={location.pathname.startsWith("/event") ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname.startsWith("/event")
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       Event
                     </Button>
@@ -106,7 +138,11 @@ function AppContent() {
                   <Link to="/api/">
                     <Button
                       className="w-100"
-                      variant={location.pathname.startsWith("/api") ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname.startsWith("/api")
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       API
                     </Button>
@@ -118,12 +154,23 @@ function AppContent() {
                   <Link to="/hooks/">
                     <Button
                       className="w-100"
-                      variant={location.pathname.startsWith("/hooks") ? "primary" : "outline-primary"}
+                      variant={
+                        location.pathname.startsWith("/hooks")
+                          ? "primary"
+                          : "outline-primary"
+                      }
                     >
                       Hooks
                     </Button>
                   </Link>
                 </div>
+                {/* <div className="col-6 col-lg-2 p-1">
+                  <fun_Context.Consumer>
+                    {(value) => {
+                      return <h2>{value}</h2>;
+                    }}
+                  </fun_Context.Consumer>
+                </div> */}
               </div>
             </div>
           </div>
