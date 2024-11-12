@@ -5,7 +5,7 @@ import { function_UseState } from "./UseState";
 import { function_UseEffect } from "./UseEffect";
 import { function_UseRef } from "./UseRef";
 import { FunctionUseContext } from "./UseContext";
-import { function_UseMemo } from "./UseMemo";
+import { Function_UseMemo } from "./UseMemo";
 import { function_UseReducer } from "./UseReducer";
 import { ContextApi } from "./UseContext/ContextApi/MyContext";
 
@@ -37,7 +37,7 @@ function HOOKS() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 className="p-2 fw-bold myText">modern JavaScript:</h2>
+            <h2 className="p-2 fw-bold myText">React Hooks :</h2>
             <input
               type="text"
               placeholder="ابحث هنا..."
@@ -92,7 +92,7 @@ function HOOKS() {
                         <FunctionUseContext />
                       </ContextApi>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="UseMemo">{function_UseMemo()}</Tab.Pane>
+                    <Tab.Pane eventKey="UseMemo">{Function_UseMemo()}</Tab.Pane>
                     <Tab.Pane eventKey="UseReducer">
                       {function_UseReducer()}
                     </Tab.Pane>

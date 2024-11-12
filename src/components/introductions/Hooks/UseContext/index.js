@@ -127,6 +127,7 @@ const FunctionUseContext = () => {
                 </li>
                 <li>
                   ContextApi عند استدعاء صفحة الوسيط لازم تكون مابين
+                  <br/>
                   <Image
                     className="zoom-image mt-2 rounded"
                     src="https://gcdnb.pbrd.co/images/o9Ym0VNeKvlW.png?o=1"
