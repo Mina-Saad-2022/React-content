@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Image,Button} from "react-bootstrap";
+import { Image, Button } from "react-bootstrap";
 
 const FunctionComponent = () => {
   const [count, setcount] = useState(0);
@@ -16,11 +16,7 @@ const FunctionComponent = () => {
     <>
       <h4>the count is : {count}</h4>
       <div className="d-flex justify-content-center flex-wrap">
-        <Button
-          className="w-25 m-2 "
-          onClick={add_one}
-          variant="primary"
-        >
+        <Button className="w-25 m-2 " onClick={add_one} variant="primary">
           <h4>+</h4>
         </Button>
 
@@ -55,7 +51,7 @@ const function_UseState = () => {
             لازم استدعيها في بداية الصفحة
             <br />
             <Image
-              className="w-75 zoom-image mt-2 rounded"
+              className="zoom-image mt-2 rounded"
               src="https://gcdnb.pbrd.co/images/SeweX47ckOcJ.png?o=1"
             />
           </li>
@@ -81,7 +77,7 @@ const function_UseState = () => {
         وهتكون عبارة عن
       </p>
       <Image
-        className="w-50 zoom-image mt-2 rounded"
+        className="zoom-image mt-2 rounded"
         src="https://gcdnb.pbrd.co/images/m0sMXgum0Lvk.png?o=1"
       />
       <p>بتعبر عن القيمة القديمة وهي رقم 0 count وهنا ال </p>
@@ -91,7 +87,7 @@ const function_UseState = () => {
         بتعته في نفس ال button بعد كده هعمل 2
       </p>
       <Image
-        className="w-50 zoom-image mt-2 rounded"
+        className="zoom-image mt-2 rounded"
         src="https://gcdnb.pbrd.co/images/Pu8qZC2ONlEK.png?o=1"
       />
       <div className="border text-center pt-2 w-100 mt-2">

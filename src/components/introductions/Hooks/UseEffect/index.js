@@ -1,4 +1,4 @@
-import { Image , Form } from "react-bootstrap";
+import { Image, Form } from "react-bootstrap";
 
 import React, { useState, useEffect } from "react";
 
@@ -12,7 +12,7 @@ const InputExample = () => {
       <Form.Control
         type="text"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)} 
+        onChange={(e) => setInputValue(e.target.value)}
         placeholder="Type something"
         className="w-50"
       />
@@ -47,7 +47,7 @@ const function_UseEffect = () => {
               لازم استدعيها في بداية الصفحة
               <br />
               <Image
-                className="w-75 zoom-image mt-2 rounded"
+                className="zoom-image mt-2 rounded"
                 src="https://gcdnb.pbrd.co/images/y0AFE6FR16iT.png?o=1"
               />
             </li>
@@ -58,7 +58,7 @@ const function_UseEffect = () => {
             useEffect ال
             <br />
             <Image
-              className="w-75 zoom-image mt-2 rounded"
+              className="zoom-image mt-2 rounded"
               src="https://gcdnb.pbrd.co/images/3Jp7Vh8A1Zjh.png?o=1"
             />
           </li>

@@ -69,7 +69,7 @@ const FunctionUseContext = () => {
                         والمن خلالها هخزن القيم بتاعتي import React عند ال
                         context هستدعي في الاول ال
                         <Image
-                          className="w-75 zoom-image mt-2 rounded"
+                          className="zoom-image mt-2 rounded"
                           src="https://gcdnb.pbrd.co/images/VtUtG9tCZnoz.png?o=1"
                         />
                       </li>
@@ -77,7 +77,7 @@ const FunctionUseContext = () => {
                         newContext وهسميه اي اسم زي منا عايز وهسميه مثلا context
                         هنشأ ال
                         <Image
-                          className="w-75 zoom-image mt-2 rounded"
+                          className="zoom-image mt-2 rounded"
                           src="https://gcdnb.pbrd.co/images/l9YUmezHykTl.png?o=1"
                         />
                       </li>
@@ -93,7 +93,7 @@ const FunctionUseContext = () => {
                         <span className="text-danger">.Provider </span>{" "}
                         وفيهاهستخدم حاجتين مهمين جدا
                         <Image
-                          className="w-75 zoom-image mt-2 rounded"
+                          className="zoom-image mt-2 rounded"
                           src="https://gcdnb.pbrd.co/images/s85WBwIFGKwZ.png?o=1"
                         />
                       </li>
@@ -101,7 +101,7 @@ const FunctionUseContext = () => {
                         export لازم بعد كده اعمل
                         <br />{" "}
                         <Image
-                          className="w-75 zoom-image mt-2 rounded"
+                          className="zoom-image mt-2 rounded"
                           src="https://gcdnb.pbrd.co/images/buLVaKVF5JiX.png?o=1"
                         />
                       </li>
@@ -113,7 +113,7 @@ const FunctionUseContext = () => {
                   لصفحة الوسيط علشان استخدم ال
                   <br />
                   <Image
-                    className="w-75 zoom-image mt-2 rounded"
+                    className="zoom-image mt-2 rounded"
                     src="https://gcdnb.pbrd.co/images/nihOkKAH0KTb.png?o=1"
                   />
                 </li>
@@ -121,14 +121,14 @@ const FunctionUseContext = () => {
                   value النا حافظها في ال data بتاعتي في اني استدعي ال
                   useContext بعدين هستخدم ال
                   <Image
-                    className="w-75 zoom-image mt-2 rounded"
+                    className="zoom-image mt-2 rounded"
                     src="https://gcdnb.pbrd.co/images/a9Dx20FGrpCy.png?o=1"
                   />
                 </li>
                 <li>
                   ContextApi عند استدعاء صفحة الوسيط لازم تكون مابين
                   <Image
-                    className="w-75 zoom-image mt-2 rounded"
+                    className="zoom-image mt-2 rounded"
                     src="https://gcdnb.pbrd.co/images/o9Ym0VNeKvlW.png?o=1"
                   />
                 </li>
@@ -136,14 +136,14 @@ const FunctionUseContext = () => {
             </ul>
           </Col>
           <Col xs={12} md={8} lg={12}>
-          <h4>شرح الفكرة باختصار </h4>
-          <Image
-                    className="w-75 zoom-image mt-2 rounded"
-                    src="https://gcdnb.pbrd.co/images/YZF8CpvoDRLF.png?o=1"
-                  />
-</Col>
+            <h4>شرح الفكرة باختصار </h4>
+            <Image
+              className="zoom-image mt-2 rounded"
+              src="https://gcdnb.pbrd.co/images/YZF8CpvoDRLF.png?o=1"
+            />
+          </Col>
           <Col xs={12} md={8} lg={12}>
-            <h5>{myContext}</h5>
+            <h2>the result : <span className="text-success">{myContext}</span> </h2>
             {/* <h5>{myContext.age}</h5> */}
           </Col>
         </Row>

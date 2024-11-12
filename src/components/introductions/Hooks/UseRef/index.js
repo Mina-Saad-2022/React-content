@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Button, Form, Row, Col ,Image } from "react-bootstrap";
+import { Button, Form, Row, Col, Image } from "react-bootstrap";
 
 const SimpleUseRefExample = () => {
   // هنا بنعمل متغير باستخدام useRef عشان نمسك بيه ال input
@@ -45,7 +45,7 @@ const function_UseRef = () => {
               عندي
             </p>
             <Image
-              className="w-50 zoom-image m-2 rounded"
+              className="zoom-image m-2 rounded"
               src="https://i.ibb.co/YtBFvyh/code.png"
             />
           </Col>
