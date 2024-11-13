@@ -2,6 +2,57 @@ import React, { useMemo, useState } from "react";
 
 import { Button, Container, Row, Col, Image } from "react-bootstrap";
 const Function_UseMemo = () => {
+  const test = () => {
+    window.Swal.fire({
+      html: `
+      [1,2,3]
+      <br/>
+ علشان مثلا ازود ع المجموع رقم 1  في كل ضغطة   usestate فدول لو هستخدم ال
+ انه الاول بيجمع 1+2+3 = 6 usestate فالبيعمله لما بستخدم ال 
+  <br/>
+7 =  وبيبداء يضيف عليها 1 فيصبح المجموع  1+2+3+1 
+<br/>
+ ولما اضغط مرة تاني يرجع يعيد نفس الموضوع من البداية   
+ <hr/>
+ <span class='text-primary'>
+ بتعمل العملية دي مرة واحدة في اول ضغطة usememo لكن لو هستخدم ال </span>
+ <br/>
+  1+2+3 = 6
+  <br/>
+   ولو ضغط مرة تانية بيحسبها كده 
+
+7 = + 1 
+ <br/>
+مش بيعيدها من البداية لا هو بيحسبها من اخر لما وقف
+ `,
+    });
+  };
+  const showAlert = () => {
+    // هنا بنستخدم sweetalert لعرض رسالة
+    // window.Swal.fire("useState عن استخدام ال  useMemo هو احنا ليه هنفضل استخدام ال ");
+    window.Swal.fire({
+      title: "<strong>سؤال مهم</strong>",
+      icon: "info",
+      html: `
+       <b class='text-primary'>useMemo</b>  هو احنا ليه هنفضل استخدام الـ,
+        <br/>
+       <b class='text-primary'>useState</b> عن استخدام الـ
+      `,
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: `
+        <i  class="fa fa-thumbs-up w-50"></i> الإجابة
+      `,
+      confirmButtonAriaLabel: "Thumbs up, great!",
+      cancelButtonText: `
+        <i class="fa fa-thumbs-down"></i>
+      `,
+      cancelButtonAriaLabel: "Thumbs down",
+      // هنا بنضيف الـ onClick سعلى الزر
+      preConfirm: test,
+    });
+  };
   const [count, setCount] = useState(0); //first parameter
   const [numbers, setNumbers] = useState([0]); // second parameter
 
@@ -79,7 +130,7 @@ const Function_UseMemo = () => {
               className="zoom-image rounded"
               src="https://gcdnb.pbrd.co/images/Izrazm2EoYmy.png?o=1"
             />
-            <br/> <br/>
+            <br /> <br />
             <Image
               className="zoom-image rounded"
               src="https://gcdnb.pbrd.co/images/mksvWOn6FwhO.png?o=1"
@@ -93,14 +144,17 @@ const Function_UseMemo = () => {
               className="m-2"
               onClick={() => setCount(count + 1)}
             >
-              Increment Count(+1): {count}
+              Increment Count : {count}
             </Button>
             <Button
               variant="secondary"
               className="m-2"
               onClick={() => setNumbers([...numbers, 10])}
             >
-              Add Number (+10)
+              Add Number
+            </Button>
+            <Button variant="danger" className="m-2" onClick={showAlert}>
+              <b> سؤال مهم جداً</b>{" "}
             </Button>
           </Col>
         </Row>
