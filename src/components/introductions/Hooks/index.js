@@ -6,7 +6,7 @@ import { function_UseEffect } from "./UseEffect";
 import { function_UseRef } from "./UseRef";
 import { FunctionUseContext } from "./UseContext";
 import { Function_UseMemo } from "./UseMemo";
-import { function_UseReducer } from "./UseReducer";
+import { Function_UseReducer } from "./UseReducer";
 import { ContextApi } from "./UseContext/ContextApi/MyContext";
 
 function HOOKS() {
@@ -94,7 +94,7 @@ function HOOKS() {
                     </Tab.Pane>
                     <Tab.Pane eventKey="UseMemo">{Function_UseMemo()}</Tab.Pane>
                     <Tab.Pane eventKey="UseReducer">
-                      {function_UseReducer()}
+                      {Function_UseReducer()}
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>
