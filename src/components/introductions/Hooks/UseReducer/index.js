@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 
-import { Container, Row, Col, Image ,Button} from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 const InitialState = { count: 0 };
 function reducer(state, action) {
   switch (action.type) {
@@ -11,12 +11,12 @@ function reducer(state, action) {
     default:
       return state;
   }
-};
+}
 
 const Function_UseReducer = () => {
   const [state, dispatch] = useReducer(reducer, InitialState);
 
- return (
+  return (
     <>
       <Container>
         <Row>
@@ -107,16 +107,36 @@ const Function_UseReducer = () => {
               </ol>
             </ul>
           </Col>
-          <Col xl={12}>
-          <Button variant="success" className="m-2 w-25" onClick={() => dispatch({ type: "INCREMENT" })}>
-              <h6>+</h6>
+          {/* <Col xl={12}>
+          <Button variant="success" className="m-1 w-25" onClick={() => dispatch({ type: "INCREMENT" })}>
+              <h4>+</h4>
             </Button>
-            <Button variant="danger" className="m-2 w-25" onClick={() => dispatch({ type: "DECREMENT" })}>
-              <h6>-</h6>
+            <Button variant="danger" className="m-1 w-25" onClick={() => dispatch({ type: "DECREMENT" })}>
+              <h4>-</h4>
             </Button>
           <p>Count: {state.count}</p>
 
-          </Col>
+          </Col> */}
+          <div className="d-flex justify-content-center flex-wrap">
+            <Button
+              onClick={() => dispatch({ type: "INCREMENT" })}
+              className="w-25 m-2 "
+              variant="primary"
+            >
+              <h4>+</h4>
+            </Button>
+
+            <Button
+              className="w-25 m-2 "
+              onClick={() => dispatch({ type: "DECREMENT" })}
+              variant="secondary"
+            >
+              <h4>-</h4>
+            </Button>
+
+          </div>
+          <h3 className="text-center">Count: {state.count}</h3>
+          {" "}
         </Row>
       </Container>
     </>
