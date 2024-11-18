@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { JSX } from "./components/introductions/JSX";
@@ -21,6 +21,7 @@ import { FatchingData } from "./FatchingData";
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
 function App() {
+ 
   return (
     <BrowserRouter>
       <AppContent />
@@ -29,17 +30,33 @@ function App() {
 }
 
 function AppContent() {
+  useEffect(() => {
+    // Check if the session is already initialized
+    if (!sessionStorage.getItem("sessionInitialized")) {
+      // Increment the counter in localStorage
+      const currentCount = Number(localStorage.getItem("openCount") || 0);
+      localStorage.setItem("openCount", currentCount + 1);
+
+      // Mark session as initialized
+      sessionStorage.setItem("sessionInitialized", "true");
+    }
+  }, []);
+
+  // Get the open count from localStorage
+  const openCount = localStorage.getItem("openCount");
+
   const location = useLocation();
 
   return (
     <div className="App">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-3">
-            <h4 className="p-2 font-bold myText">React introductions :</h4>
+          <div className="col-12 col-md-4">
+          <h6 className="text-primary p-3 myText">The project has been opened <span className="text-danger">{openCount}</span> times.</h6>
+          <h4 className="p-2 font-bold myText">React introductions :</h4>
           </div>
           {/* links pages */}
-          <div className="col-12 col-md-9 p-2">
+          <div className="col-12 col-md-8 p-2">
             <div className="container">
               <div className="row g-1">
                 {/* Modern JS */}
