@@ -18,6 +18,7 @@ import { API } from "./API";
 import { HOOKS } from "./components/introductions/Hooks";
 import { FatchingData } from "./FatchingData";
 import { Testing } from "./FatchingData/test";
+import { Test } from "./FatchingData/texting";
 
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
@@ -228,7 +229,7 @@ function AppContent() {
         <Route path="/api" element={<API />} />
         <Route path="/hooks" element={<HOOKS />} />
         <Route path="/fatching_data" element={<FatchingData />} />
-        <Route path="/testing" element={<Testing />} />
+        <Route path="/testing" element={<Test />} />
 
       </Routes>
     </div>

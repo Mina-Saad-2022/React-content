@@ -128,7 +128,7 @@ const Fetching = () => {
                       ال
                       <Image
                         className="zoom-image mt-2 rounded"
-                        src="https://gcdnb.pbrd.co/images/oox763UGEEgq.png?o=1"
+                        src="https://gcdnb.pbrd.co/images/lNYZPUxPEyME.png?o=1"
                       />{" "}
                     </li>
                   </ol>

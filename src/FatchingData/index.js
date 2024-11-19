@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 import { Fetching } from "./Fetch";
-import { Axios } from "../API/Axios";
+import { Axios } from "./Axios";
 
 function FatchingData() {
   return (
