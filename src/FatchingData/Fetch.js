@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Card, Pagination } from "react-bootstrap";
+import { Col, Container, Row, Card, Pagination, Image } from "react-bootstrap";
 
 const Fetching = () => {
   const [posts, setPosts] = useState([]);
@@ -42,9 +42,107 @@ const Fetching = () => {
   return (
     <Container>
       <Row>
+        <Col xl={12}>
+          <h3>Fetching data bu use function fetch ... </h3>
+        </Col>
+
+        <Col xl={12}>
+          <p>
+            او من اي مكان تاني data bage online او من APIجيالي من ال data
+            المقصود بيها هي ان ال Fetch كلمة{" "}
+          </p>
+          <h4 className="text-primary font-weight-bold text-decoration-underline">
+            Get ياما Post ياما هتكون data كمان نوع ال{" "}
+          </h4>
+          <p>
+            <span className="text-danger">Axios</span> او عن طريق ال{" "}
+            <span className="text-danger">Fetch</span> عن طريق حاجتين اما عن
+            طريق data اقدر اجيب ال{" "}
+          </p>
+          <ul>
+            <ol>
+              <li>javascript هي دالة موجودة جوا ال Fetch ال</li>
+              <li>
+                promise وهي بترجعلي في الاخر backend هي مكتبة بنخليني اتصل باي
+                Axios ال
+              </li>
+            </ol>
+          </ul>
+          <h3>Fetch طريقة استخدام دالة ال </h3>
+          <Container className="border p-2 mb-1">
+            <Row>
+              <Col xl={12}>
+                <h6>
+                  علشان دي بتتنفذ لاول مرة useEffect اننا نعرضها في API بتاعتنا
+                  من dataملحوظة هامة : يفضل لو هنعرض ال
+                </h6>
+              </Col>
+              <Col xl={12}>
+                <ul>
+                  <ol>
+                    <li>
+                      dependency والتاني arrow function ودي زي محنا عارفين
+                      بتتكون من قسيم وهما الاول عبارة عن useEffect اول حاجة
+                      هنستخدم ال
+                      <Image
+                        className="zoom-image mt-2 rounded"
+                        src="https://gcdnb.pbrd.co/images/Cqtnj6p8FMVa.png?o=1"
+                      />{" "}
+                    </li>
+                    <li>
+                      API ال url والفيها هنكتب fetch هنكتب دالة ال useEfect
+                      العملناها في ال arrow function بعد كده في ال
+                      <br />
+                      Get ولا هستقبل داتا وفي الحالة دي هتكون Post هل انا هبعت
+                      داتا ففي الحالة دي هتكون methoud تاني زي مثلا ال parameter
+                      وفيه اكتر من
+                      <br />
+                      then 2 بعدين هكتب
+                      <ul>
+                        <ol>
+                          <li>
+                            json بالكامل وهحدد اني بس عايز ال response الاولي
+                            علشان اجيب ال
+                          </li>
+                          <li>
+                            useetate التاينة الموجودة في ال value ودي الهتكون
+                            عبارة عن ال json التانية علشان ترجعلي الداتا النا
+                            عايزها وبرضه هحدد ال
+                          </li>
+                        </ol>
+                        <li>
+                          التانية then التانية والهي متخزنة في ال value فاضية
+                          وبعدين هبداء استعمل ال array الهتكون عبارة عن useState
+                          بعد كده هستخهدم ال
+                        </li>
+                      </ul>
+                      <Image
+                        className="zoom-image mt-2 rounded"
+                        src="https://gcdnb.pbrd.co/images/FZFW4la2ExKb.png?o=1"
+                      />{" "}
+                    </li>
+
+                    <li>
+                      ايضاً return وبداخلها return تكون داخل array map وطبعا
+                      لازم ال array map بتاعتي هستخدم ال data بعد كده علشان اعرض
+                      ال
+                      <Image
+                        className="zoom-image mt-2 rounded"
+                        src="https://gcdnb.pbrd.co/images/oox763UGEEgq.png?o=1"
+                      />{" "}
+                    </li>
+                  </ol>
+                </ul>
+              </Col>
+            </Row>
+          </Container>
+        </Col>
         {currentPosts.map((post) => (
           <Col key={post.id} md={6} className="mb-4">
-            <Card className="m-auto" style={{ width: "18rem", height: "300px" }}>
+            <Card
+              className="m-auto"
+              style={{ width: "18rem", height: "300px" }}
+            >
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>

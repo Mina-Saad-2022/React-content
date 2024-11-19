@@ -17,6 +17,7 @@ import { Events } from "./components/introductions/Events";
 import { API } from "./API";
 import { HOOKS } from "./components/introductions/Hooks";
 import { FatchingData } from "./FatchingData";
+import { Testing } from "./FatchingData/test";
 
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
@@ -194,6 +195,22 @@ function AppContent() {
                     </Button>
                   </Link>
                 </div>{" "}
+
+                 {/* Fatching data */}
+                 <div className="col-6 col-lg-2 p-1">
+                  <Link to="/testing/">
+                    <Button
+                      className="w-100"
+                      variant={
+                        location.pathname.startsWith("/testing")
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Testing
+                    </Button>
+                  </Link>
+                </div>{" "}
               </div>
             </div>
           </div>
@@ -211,6 +228,8 @@ function AppContent() {
         <Route path="/api" element={<API />} />
         <Route path="/hooks" element={<HOOKS />} />
         <Route path="/fatching_data" element={<FatchingData />} />
+        <Route path="/testing" element={<Testing />} />
+
       </Routes>
     </div>
   );
