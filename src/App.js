@@ -14,11 +14,8 @@ import {
 } from "react-router-dom";
 import { RenderList } from "./components/introductions/RenderList";
 import { Events } from "./components/introductions/Events";
-import { API } from "./API";
 import { HOOKS } from "./components/introductions/Hooks";
 import { FatchingData } from "./FatchingData";
-import { Testing } from "./FatchingData/test";
-import { Test } from "./FatchingData/texting";
 
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
@@ -151,21 +148,7 @@ function AppContent() {
                     </Button>
                   </Link>
                 </div>
-                {/* API */}
-                <div className="col-6 col-lg-2 p-1">
-                  <Link to="/api/">
-                    <Button
-                      className="w-100"
-                      variant={
-                        location.pathname.startsWith("/api")
-                          ? "primary"
-                          : "outline-primary"
-                      }
-                    >
-                      API
-                    </Button>
-                  </Link>
-                </div>
+              
                 {/* HOOKS */}
                 <div className="col-6 col-lg-2 p-1">
                   <Link to="/hooks/">
@@ -197,21 +180,6 @@ function AppContent() {
                   </Link>
                 </div>{" "}
 
-                 {/* Fatching data */}
-                 <div className="col-6 col-lg-2 p-1">
-                  <Link to="/testing/">
-                    <Button
-                      className="w-100"
-                      variant={
-                        location.pathname.startsWith("/testing")
-                          ? "primary"
-                          : "outline-primary"
-                      }
-                    >
-                      Testing
-                    </Button>
-                  </Link>
-                </div>{" "}
               </div>
             </div>
           </div>
@@ -226,10 +194,8 @@ function AppContent() {
         <Route path="/renderList" element={<RenderList />} />
         <Route path="/router/*" element={<AppRouter />} />
         <Route path="/event" element={<Events />} />
-        <Route path="/api" element={<API />} />
         <Route path="/hooks" element={<HOOKS />} />
         <Route path="/fatching_data" element={<FatchingData />} />
-        <Route path="/testing" element={<Test />} />
 
       </Routes>
     </div>

@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from 'react';
-import { Col, Container, Image, Row, Card, Form } from 'react-bootstrap';
+import { useEffect, useState } from "react";
+import { Col, Container, Image, Row, Card, Form } from "react-bootstrap";
 
 const API = () => {
   const [data, setData] = useState(null); // لتخزين البيانات من الـ API
@@ -25,10 +25,10 @@ const API = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <Row className="p-2 border">
-        <Col xs={12} style={{ fontFamily: 'Times New Roman' }}>
-          <h2>API التعامل مع</h2>
+    <Container>
+      <Row className="p-2">
+        <Col xs={12} style={{ fontFamily: "Times New Roman" }}>
+          <h2>Testing</h2>
         </Col>
 
         <Col md={5} xs={12}>
@@ -37,17 +37,28 @@ const API = () => {
             onChange={(e) => handleProductChange(e.target.value)}
             className="p-2"
           >
-            {data && data.map((product) => (
-              <option key={product.id} value={product.id}>{product.brand}</option>
-            ))}
+            {data &&
+              data.map((product) => (
+                <option key={product.id} value={product.id}>
+                  {product.brand}
+                </option>
+              ))}
           </Form.Select>
         </Col>
 
         <Col md={7} xs={12} className=" mt-md-0">
           <Card className="">
-            <div className="w-100 overflow-hidden text-center p-1 " style={{ height: '200px' }}>
+            <div
+              className="w-100 overflow-hidden text-center p-1 "
+              style={{ height: "200px" }}
+            >
               {selectedProduct && (
-                <Image src={selectedProduct.images[0]} className="p-2 m-auto w-25 h-75" alt="Card image cap" roundedCircle/>
+                <Image
+                  src={selectedProduct.images[0]}
+                  className="p-2 m-auto w-25 h-75"
+                  alt="Card image cap"
+                  roundedCircle
+                />
               )}
             </div>
             <Card.Body className="text-center">
