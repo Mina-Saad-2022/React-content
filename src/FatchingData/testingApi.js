@@ -17,6 +17,12 @@ const API = () => {
 
   useEffect(() => {
     fetchData(); // استدعاء الدالة عند تحميل المكون لأول مرة
+    
+    const interval = setInterval(() => {
+      fetchData(); // تحديث البيانات كل 24 ساعة
+    }, 24 * 60 * 60 * 1000); // 24 ساعة بالـ milliseconds
+
+    return () => clearInterval(interval); // عشان لو المكون اتدمج، لازم نتأكد إن الـ interval بيتوقف
   }, [city]); // سيتم التحديث عند تغيير المدينة
 
   return (
@@ -33,10 +39,15 @@ const API = () => {
             className="p-2"
             value={city}
           >
-            <option value="Cairo">القاهرة</option>
+            <option className="font-weight-bold" value="Cairo">القاهرة</option>
             <option value="London">لندن</option>
             <option value="New York">نيويورك</option>
-            <option value="Tokyo">طوكيو</option>
+            <option value="Paris">باريس</option>
+            <option value="Dubai">دبي</option>
+            <option value="Riyadh">الرياض</option>
+            <option value="Jerusalem">القدس (فلسطين)</option>
+            <option value="Moscow">موسكو (روسيا)</option>
+            <option value="Manchester">مانشستر (إنجلترا)</option>
             {/* أضف المزيد من المدن هنا */}
           </Form.Select>
         </Col>
@@ -50,16 +61,16 @@ const API = () => {
                     الطقس في {data.name}
                   </Card.Title>
                   <Card.Text className="text-primary">
-                    درجة الحرارة: {data.main.temp}°C
+                  °C {data.main.temp} : درجة الحرارة 
                   </Card.Text>
                   <Card.Text className="text-primary">
                     الحالة: {data.weather[0].description}
                   </Card.Text>
                   <Card.Text className="text-primary">
-                    الرطوبة: {data.main.humidity}%
+                  % {data.main.humidity} : الرطوبة 
                   </Card.Text>
                   <Card.Text className="text-primary">
-                    سرعة الرياح: {data.wind.speed} م/ث
+                      سرعة الرياح : {data.wind.speed} م/ث
                   </Card.Text>
                 </>
               ) : (
