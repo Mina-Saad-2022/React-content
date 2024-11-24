@@ -16,6 +16,7 @@ import { RenderList } from "./components/introductions/RenderList";
 import { Events } from "./components/introductions/Events";
 import { HOOKS } from "./components/introductions/Hooks";
 import { FatchingData } from "./FatchingData";
+import { Mina } from "./test";
 
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
@@ -180,6 +181,20 @@ function AppContent() {
                   </Link>
                 </div>{" "}
 
+                <div className="col-6 col-lg-2 p-1">
+                  <Link to="/mina/">
+                    <Button
+                      className="w-100"
+                      variant={
+                        location.pathname.startsWith("/mina")
+                          ? "primary"
+                          : "outline-primary"
+                      }
+                    >
+                      Mina
+                    </Button>
+                  </Link>
+                </div>{" "}
               </div>
             </div>
           </div>
@@ -196,6 +211,7 @@ function AppContent() {
         <Route path="/event" element={<Events />} />
         <Route path="/hooks" element={<HOOKS />} />
         <Route path="/fatching_data" element={<FatchingData />} />
+        <Route path="/mina" element={<Mina />} />
 
       </Routes>
     </div>
