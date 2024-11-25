@@ -16,12 +16,11 @@ import { RenderList } from "./components/introductions/RenderList";
 import { Events } from "./components/introductions/Events";
 import { HOOKS } from "./components/introductions/Hooks";
 import { FatchingData } from "./FatchingData";
-import { Mina } from "./test";
+import { Projects } from "./Projects";
 
 // import { fun_Context } from "./components/introductions/Hooks/UseContext/ContextApi/MyContext";
 
 function App() {
- 
   return (
     <BrowserRouter>
       <AppContent />
@@ -52,8 +51,11 @@ function AppContent() {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-4">
-          <h6 className="text-primary p-3 myText">The project has been opened <span className="text-danger">{openCount}</span> times.</h6>
-          <h4 className="p-2 font-bold myText">React introductions :</h4>
+            <h6 className="text-primary p-3 myText">
+              The project has been opened{" "}
+              <span className="text-danger">{openCount}</span> times.
+            </h6>
+            <h4 className="p-2 font-bold myText">React introductions :</h4>
           </div>
           {/* links pages */}
           <div className="col-12 col-md-8 p-2">
@@ -149,7 +151,6 @@ function AppContent() {
                     </Button>
                   </Link>
                 </div>
-              
                 {/* HOOKS */}
                 <div className="col-6 col-lg-2 p-1">
                   <Link to="/hooks/">
@@ -180,18 +181,17 @@ function AppContent() {
                     </Button>
                   </Link>
                 </div>{" "}
-
                 <div className="col-6 col-lg-2 p-1">
-                  <Link to="/mina/">
+                  <Link to="/projects/">
                     <Button
                       className="w-100"
                       variant={
-                        location.pathname.startsWith("/mina")
+                        location.pathname.startsWith("/projects")
                           ? "primary"
                           : "outline-primary"
                       }
                     >
-                      Mina
+                      Projects
                     </Button>
                   </Link>
                 </div>{" "}
@@ -211,8 +211,7 @@ function AppContent() {
         <Route path="/event" element={<Events />} />
         <Route path="/hooks" element={<HOOKS />} />
         <Route path="/fatching_data" element={<FatchingData />} />
-        <Route path="/mina" element={<Mina />} />
-
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>
   );
