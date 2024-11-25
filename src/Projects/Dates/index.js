@@ -131,12 +131,12 @@ const Dates = () => {
           </div>
         </Col>
         <Col xs={6} xl={6}>
-          <Button onClick={restoreUsers} variant="primary" className="w-75">
+          <Button onClick={restoreUsers} variant="primary" className="w-100 w-lg75">
             View appointments
           </Button>
         </Col>
         <Col xs={6} xl={6}>
-          <Button onClick={deleteUsers} variant="danger" className="w-75">
+          <Button onClick={deleteUsers} variant="danger" className="w-100 w-lg75">
             Clear all
           </Button>
         </Col>
