@@ -40,7 +40,11 @@ const Dates = () => {
 
   const formatTime = (timeString) => {
     const date = new Date(`1970-01-01T${timeString}:00`);
-    return date.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+    return date.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    });
   };
 
   const handleInputChange = (e) => {
@@ -115,10 +119,13 @@ const Dates = () => {
                     <div className="p-2">
                       <h5 className="text-danger">
                         {" "}
-                        Name : <span className="text-dark">{item.name}</span>{" "}
+                        Name : <span className="text-dark">
+                          {item.name}
+                        </span>{" "}
                       </h5>
                       <h5 className="text-danger">
-                        The clock : <span className="text-dark">{item.date}</span>
+                        The clock :{" "}
+                        <span className="text-dark">{item.date}</span>
                       </h5>
                     </div>
                   </div>
@@ -130,15 +137,24 @@ const Dates = () => {
             )}
           </div>
         </Col>
-        <Col xs={6} xl={6}>
-          <Button onClick={restoreUsers} variant="primary" className="w-100 w-lg75">
+        <Col xs={12} xl={6}>
+          <Button
+            onClick={restoreUsers}
+            variant="primary"
+            className="w-100 m-2"
+          >
             View appointments
           </Button>
         </Col>
-        <Col xs={6} xl={6}>
-          <Button onClick={deleteUsers} variant="danger" className="w-100 w-lg75">
+        <Col xs={12} xl={6}>
+          <Button
+            onClick={deleteUsers}
+            variant="danger"
+            className="w-100  m-2"
+          >
             Clear all
           </Button>
+
         </Col>
       </Row>
     </Container>
