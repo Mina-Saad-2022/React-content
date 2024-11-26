@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 import { Dates } from './Dates';
-
+import { Menu } from './Menu';
 const Projects = () => {
   return (
     <header className="App-header ">
@@ -18,14 +18,18 @@ const Projects = () => {
                <Nav.Item>
                  <Nav.Link eventKey="Dates">Dates Reminder</Nav.Link>
                </Nav.Item>
+               <Nav.Item>
+                 <Nav.Link eventKey="Menu">Menu Project Intro</Nav.Link>
+               </Nav.Item>
             
              </Nav>
            </Col>
  
            <Col md={9} sm={12}>
-             <Tab.Content  className="border p-2">
-               <Tab.Pane eventKey="Dates">{Dates()}</Tab.Pane>
-         
+             <Tab.Content  className="border ">
+               <Tab.Pane className='p-2' eventKey="Dates">{Dates()}</Tab.Pane>
+               <Tab.Pane eventKey="Menu">{Menu()}</Tab.Pane>
+
              </Tab.Content>
            </Col>
          </Row>
