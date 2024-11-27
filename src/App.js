@@ -213,8 +213,17 @@ function AppContent() {
         <Route path="/fatching_data" element={<FatchingData />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+
+      <div>
+      <footer class="bg-light text-center text-lg-start mt-4">
+    <div class="text-center p-3 footer" >
+      All rights reserved © Mina Saad
     </div>
-  );
+  </footer>
+      </div>
+    </div>
+   
+    );
 }
 
 export default App;
