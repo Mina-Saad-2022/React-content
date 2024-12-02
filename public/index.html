@@ -43,7 +43,33 @@
 
   <title>React introductions</title>
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css" >
+<style>
+  .card-container {
+  position: relative;
+  overflow: hidden; /* للتأكد من أن الأيقونة متحكمة داخل الكارد */
+}
 
+.heart-icon {
+  position: absolute;
+  bottom: 100px; /* مكانها في البداية خارج الكارد */
+  left: 10%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: black;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.card-container:hover .heart-icon {
+  bottom: 90%; /* تظهر عند hover */
+  opacity: 1;
+
+}
+.heart-icon.liked {
+  color: red; /* اللون عند الضغط */ }
+
+</style>
 </head>
 
 <body>
