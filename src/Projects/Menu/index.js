@@ -10,13 +10,15 @@ const Menu = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all"); // الفئة المحددة
-
+  const [itemCount, setItemCount] = useState(0);
   useEffect(() => {
     axios
       .get("https://6745bf1a512ddbd807f974fc.mockapi.io/menu")
       .then((response) => {
         setData(response.data);
         setFilteredData(response.data); // عرض البيانات كاملة في البداية
+        setItemCount(response.data.length); // تخزين عدد العناصر
+
       })
       .catch((error) => console.log(error));
   }, []);
@@ -26,7 +28,6 @@ const Menu = () => {
     setFilteredData(filtered);
     setActiveCategory(category);
   };
-
   return (
     <>
       <Container className="bg-body-tertiary">
@@ -41,7 +42,7 @@ const Menu = () => {
             <ButtonsHead filterdata={filterData} activeCategory={activeCategory}/>
           </Col>
           <Col>
-            <Body data={filteredData} /> {/* تمرير البيانات المفلترة */}
+                      <Body data={filteredData} /> {/* تمرير البيانات المفلترة */}
           </Col>
         </Row>
       </Container>
