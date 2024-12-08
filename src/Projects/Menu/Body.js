@@ -1,23 +1,13 @@
-import React, { useState } from "react";
-import { Row, Col, Card, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Row, Col, Card } from "react-bootstrap";
 
-const Body = ({ data }) => {
-  return (
-    <Row>
-      {data.map((item) => (
-        <Col className="mb-2" xl={4} key={item.id}>
-          <CardComponent item={item} />
-        </Col>
-      ))}
-    </Row>
-  );
-};
-
-const CardComponent = ({ item }) => {
+// Card component to display item information
+const CardComponent = ({ item, toggleLike }) => {
   const [isLiked, setIsLiked] = useState(false);
 
-  const toggleLike = () => {
-    setIsLiked(!isLiked);
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked); // Toggle the like state
+    toggleLike(item.id); // Trigger like callback in the parent component
   };
 
   return (
@@ -25,9 +15,9 @@ const CardComponent = ({ item }) => {
       <Card.Img className="image_card" variant="top" src={item.photo} />
       <div
         className={`heart-icon ${isLiked ? "liked" : ""}`}
-        onClick={toggleLike}
+        onClick={handleLikeClick}
       >
-        <i class="fa-solid fa-heart"></i>
+        <i className="fa-solid fa-heart"></i>
       </div>
       <Card.Body>
         <Card.Title className="text-center">{item.name}</Card.Title>
@@ -38,11 +28,32 @@ const CardComponent = ({ item }) => {
         <Card.Text>
           <h5 className="text-danger">Price: {item.price}$</h5>
         </Card.Text>
-        <Button className="w-100" variant="primary">
-          Go somewhere
-        </Button>
       </Card.Body>
     </Card>
+  );
+};
+
+// Body component to filter and display items with search and category filter
+const Body = ({ data, setSearchQuery, searchQuery, toggleLike }) => {
+  // Filter items based on search query
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
+    <div>
+      <Row>
+        {filteredData.length > 0 ? (
+          filteredData.map((item) => (
+            <Col className="mb-2" xl={4} key={item.id}>
+              <CardComponent item={item} toggleLike={toggleLike} />
+            </Col>
+          ))
+        ) : (
+          <h3 className="text-center">No items found!</h3>
+        )}
+      </Row>
+    </div>
   );
 };
 
